@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="ro"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ticu Construct - Construcții și Amenajări Profesionale</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f3712b",
+                        "background-light": "#f8f6f5",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 px-4 md:px-20 lg:px-40 py-4">
+<div class="mx-auto max-w-[1200px] flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-4xl">foundation</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight">TICU CONSTRUCT</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#">Acasă</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#servicii">Servicii</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#despre">Despre noi</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#">Galerie</a>
+<a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="#contact">Contact</a>
+</nav>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                    Cere ofertă
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="px-4 md:px-20 lg:px-40 py-20 md:py-32 max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center text-center gap-12">
+<div class="flex flex-col gap-6 max-w-3xl">
+<span class="text-primary font-bold tracking-[0.2em] text-sm uppercase">Experiență de peste 10 ani</span>
+<h1 class="text-slate-900 dark:text-white text-5xl md:text-7xl font-black leading-tight tracking-tight">
+                                Construim cu pasiune, <br/><span class="text-primary">finisăm cu precizie.</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed mx-auto max-w-2xl">
+                                Echipa lui Nico Ticu oferă servicii complete de tencuit, gletuit, izolații și amenajări exterioare. Calitate garantată și respectarea termenelor pentru casa visurilor tale.
+                            </p>
+</div>
+<div class="w-full max-w-2xl">
+<img alt="International Workers Day Graphic" class="w-full h-auto object-contain" src="{{DATA:IMAGE:IMAGE_2}}"/>
+</div>
+<div class="flex flex-wrap justify-center gap-6 mt-8">
+<button class="flex min-w-[220px] cursor-pointer items-center justify-center rounded-full h-14 px-10 bg-primary text-white text-base font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-all">
+                                Cere o ofertă gratuită
+                            </button>
+<button class="flex min-w-[220px] cursor-pointer items-center justify-center rounded-full h-14 px-10 border-2 border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                Vezi proiecte
+                            </button>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="bg-white dark:bg-background-dark py-32 px-4 md:px-20 lg:px-40" id="servicii"><div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col items-center text-center gap-4 mb-20">
+<h2 class="text-primary font-bold uppercase tracking-[0.3em] text-xs">Serviciile Noastre</h2>
+<h3 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black">Soluții Complete</h3>
+<div class="h-1 w-12 bg-primary mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Service 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="size-20 bg-slate-50 dark:bg-slate-800/50 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">format_paint</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Tencuit &amp; Gletuit</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">Finisaje interioare de înaltă calitate pentru pereți perfect drepți și suprafețe impecabile gata de vopsit.</p>
+</div>
+<!-- Service 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="size-20 bg-slate-50 dark:bg-slate-800/50 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">layers</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Turnat Șapă</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">Baze solide, plane și perfect nivelate pentru orice tip de pardoseală, de la parchet la gresie sau rășini.</p>
+</div>
+<!-- Service 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="size-20 bg-slate-50 dark:bg-slate-800/50 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Betoane</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">Fundații rezistente, platforme industriale și trotuare durabile, executate conform normelor tehnice.</p>
+</div>
+<!-- Service 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="size-20 bg-slate-50 dark:bg-slate-800/50 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">thermostat</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Izolație Exterioară</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">Eficiență termică maximă și protecție de lungă durată pentru casa ta, folosind materiale izolante de top.</p>
+</div>
+<!-- Service 5 -->
+<div class="flex flex-col items-center text-center group">
+<div class="size-20 bg-slate-50 dark:bg-slate-800/50 rounded-full flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">fence</span>
+</div>
+<h4 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Garduri &amp; Alei</h4>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">Amenajări exterioare estetice, funcționale și extrem de rezistente la intemperii și uzură.</p>
+</div>
+<!-- Service 6 / CTA -->
+<div class="bg-slate-900 dark:bg-primary p-10 rounded-3xl flex flex-col justify-center items-center text-center text-white">
+<h4 class="text-2xl font-bold mb-4">Proiect Special?</h4>
+<p class="mb-8 opacity-80 text-sm">Suntem gata să preluăm provocarea ta. Contactează-ne pentru o soluție personalizată.</p>
+<button class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-colors text-sm">Solicită Consultantă</button>
+</div>
+</div>
+</div></section>
+<!-- About Us -->
+<section class="py-24 px-4 md:px-20 lg:px-40 bg-white dark:bg-background-dark" id="despre">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+<img alt="Work in progress" class="rounded-2xl w-full h-64 object-cover" data-alt="Construction worker smoothing cement floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI-WG7UaePsnSbhLtm4xV0tOd7W5mH_Oovb5X2w3nt2muEatZvLCEqGdqieoCWZt2_IDoxnPBJt1hUQW_Hq2KBKlxEh3dQlOneqvEgDmDe2gcCvc7kTLQtbgBc8HE2825v-4RM8rZlnZ4Lhywfk-rERD0_sT2XHJ9vKDlMbZRmVySVKldXNd78IiXdSwxlVvdFoAy_qVa3NbhzhIEQSbuavZwjB2q4TBamKrRMTX8T3rt2dukx5bP2qyElEOUYU3D9owl0VHGtkr4"/>
+<img alt="Finished interior" class="rounded-2xl w-full h-64 object-cover mt-8" data-alt="Finished interior with smooth white walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBKk6_LrF2TN76JHatJESA3wvc2Geb_uHyDXkTSRYbJMef6hxdwQbr0jXy5e1oZo0JrZJ10C7GAh6Xd11at6eR96W4MJiOmb4XmB6T45OPtZWjeA10qzP-iE_TCWNZ1tyvYI9pEEhuVt47g5V4k7CvblZglo2QqRgYwzTFuoamf8CdXNc5k7rWOV9bWLStrt-Gvojl9_iJ1dR6uaw-eURH95HwHtsijjUafIm7xZlq20Vjmu6XwyDAiH8kV8RNUKH5vO-ncyvtyQM"/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-6">
+<h2 class="text-primary font-bold uppercase tracking-widest text-sm">Povestea Noastră</h2>
+<h3 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black">Pasiune și Profesionalism în România</h3>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            De peste 10 ani, echipa condusă de Nico Ticu transformă proiectele clienților în realitate. Ne mândrim cu seriozitatea noastră și atenția la detalii care ne-a consacrat pe piața locală.
+                        </p>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Fiecare casă pe care o finisăm sau fiecare fundație pe care o turnăm reprezintă o carte de vizită pentru noi. Nu facem compromisuri când vine vorba de calitatea execuției sau a materialelor folosite.
+                        </p>
+<div class="flex gap-8 mt-4">
+<div>
+<p class="text-4xl font-black text-primary">150+</p>
+<p class="text-sm font-semibold text-slate-500 uppercase">Proiecte Finalizate</p>
+</div>
+<div>
+<p class="text-4xl font-black text-primary">10+</p>
+<p class="text-sm font-semibold text-slate-500 uppercase">Ani Experiență</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 px-4 md:px-20 lg:px-40">
+<div class="max-w-[1200px] mx-auto bg-primary rounded-[2rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl shadow-primary/40">
+<!-- Decor pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-8">
+<h2 class="text-3xl md:text-5xl font-black max-w-[800px]">Ești gata să începi proiectul tău?</h2>
+<p class="text-xl opacity-90 max-w-[600px]">Contactează-ne astăzi pentru o consultanță gratuită și o estimare de preț corectă.</p>
+<button class="bg-white text-primary text-lg font-bold px-12 py-5 rounded-full shadow-lg hover:scale-105 transition-transform">
+                            Contactează-ne Acum
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-16 px-4 md:px-20 lg:px-40" id="contact">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">foundation</span>
+<h2 class="text-white text-xl font-black tracking-tight uppercase">Ticu Construct</h2>
+</div>
+<p class="text-sm leading-relaxed">
+                        Partenerul tău de încredere pentru construcții și amenajări profesionale în București și împrejurimi.
+                    </p>
+<div class="flex gap-4">
+<a class="size-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="size-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">thumb_up</span>
+</a>
+<a class="size-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">camera</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Link-uri Rapide</h3>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Acasă</a></li>
+<li><a class="hover:text-primary transition-colors" href="#servicii">Servicii</a></li>
+<li><a class="hover:text-primary transition-colors" href="#despre">Despre Noi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Proiecte</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Informații Contact</h3>
+<ul class="flex flex-col gap-4 text-sm">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">phone</span>
+<span>+40 700 000 000</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<span>contact@ticuconstruct.ro</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span data-location="Bucharest, Romania">Strada Constructorilor Nr. 24, București</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Program de lucru</h3>
+<ul class="flex flex-col gap-2 text-sm">
+<li class="flex justify-between">
+<span>Luni - Vineri:</span>
+<span class="text-white font-semibold">08:00 - 18:00</span>
+</li>
+<li class="flex justify-between">
+<span>Sâmbătă:</span>
+<span class="text-white font-semibold">09:00 - 14:00</span>
+</li>
+<li class="flex justify-between">
+<span>Duminică:</span>
+<span class="text-slate-500 font-semibold italic">Închis</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+<p>© 2024 Ticu Construct. Toate drepturile rezervate.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Politică de Confidențialitate</a>
+<a class="hover:text-white" href="#">Termeni și Condiții</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

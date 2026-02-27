@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Despre Noi - Ticu Construct</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f3712b",
+                        "background-light": "#f8f6f5",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Space Grotesk', sans-serif; }
+        .button-wrapper::before {
+            animation: spin-gradient 4s linear infinite;
+        }
+        @keyframes spin-gradient {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md dark:bg-background-dark/80 px-4 md:px-20 lg:px-40 py-4">
+            <div class="mx-auto max-w-[1200px] flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined text-4xl">foundation</span>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight uppercase">TICU CONSTRUCT</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="index.html">Acasă</a>
+                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="index.html#servicii">Servicii</a>
+                    <a class="text-primary text-sm font-bold" href="despre.html">Despre noi</a>
+                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="galerie.html">Galerie</a>
+                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="preturi.html">Prețuri</a>
+                    <a class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors text-sm font-semibold" href="index.html#contact">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <div class="hidden sm:inline-block relative p-0.5 rounded-full overflow-hidden hover:scale-105 transition duration-300 active:scale-100 before:content-[''] before:absolute before:inset-[-100%] before:bg-[conic-gradient(from_0deg,_#f3712b,_#f3712b30,_#f3712b)] button-wrapper">
+                        <button class="relative z-10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-full px-6 py-2 font-bold text-sm">Cere ofertă</button>
+                    </div>
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-900 dark:text-white p-2">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+            
+            <!-- Mobile Menu Sidebar -->
+            <div id="mobile-menu" class="fixed top-0 right-0 h-full w-[80%] max-w-[300px] bg-white dark:bg-background-dark z-[70] translate-x-full transition-transform duration-300 ease-in-out p-8 shadow-2xl">
+                <div class="flex flex-col h-full">
+                    <div class="flex items-center justify-between mb-12">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-3xl">foundation</span>
+                            <span class="font-black uppercase tracking-tight">Ticu</span>
+                        </div>
+                        <button id="close-menu-btn" class="text-slate-900 dark:text-white">
+                            <span class="material-symbols-outlined text-3xl">close</span>
+                        </button>
+                    </div>
+                    <nav class="flex flex-col gap-6">
+                        <a class="mobile-nav-link text-xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="index.html">Acasă</a>
+                        <a class="mobile-nav-link text-xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="index.html#servicii">Servicii</a>
+                        <a class="mobile-nav-link text-xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="despre.html">Despre noi</a>
+                        <a class="mobile-nav-link text-xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="galerie.html">Galerie</a>
+                        <a class="mobile-nav-link text-xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors" href="index.html#contact">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileOverlay = document.getElementById('mobile-menu-overlay');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('translate-x-full');
+                mobileOverlay.classList.toggle('opacity-0');
+                mobileOverlay.classList.toggle('pointer-events-none');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            closeMenuBtn.addEventListener('click', toggleMenu);
+            mobileOverlay.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        </script>
+
+        <main class="flex-1">
+            <!-- Hero Section Despre -->
+            <section class="py-20 px-4 md:px-20 lg:px-40 bg-white dark:bg-slate-900">
+                <div class="max-w-[1200px] mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6">Pasiune pentru Construcții,<br><span class="text-primary">Devotament pentru Clienți</span></h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Suntem o echipă dedicată transformării spațiilor în locuințe de vis, punând accent pe detalii și durabilitate.</p>
+                </div>
+            </section>
+
+            <!-- Misiune și Viziune -->
+            <section class="py-24 px-4 md:px-20 lg:px-40">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1503387762-592dee58292b?auto=format&fit=crop&q=80&w=1200" alt="Echipa la lucru" class="rounded-[2.5rem] shadow-2xl" />
+                        <div class="absolute -bottom-10 -left-10 bg-primary p-8 rounded-3xl text-white hidden lg:block shadow-xl">
+                            <p class="text-4xl font-black">100%</p>
+                            <p class="text-sm font-bold opacity-80 uppercase tracking-wider">Compromis Zero</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-2">Misiunea Noastră</h2>
+                            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-4">Construim viitorul cu integritate</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">La Ticu Construct, credem că o casă nu este doar o structură, ci un spațiu pentru amintiri. Misiunea noastră este să oferim servicii de cea mai înaltă calitate, folosind tehnici moderne și materiale premium, asigurându-ne că fiecare proiect reflectă personalitatea clientului nostru.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary mb-4">handyman</span>
+                                <h4 class="font-bold mb-2">Precizie</h4>
+                                <p class="text-xs text-slate-500">Fiecare unghi și fiecare finisaj este verificat riguros.</p>
+                            </div>
+                            <div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary mb-4">schedule</span>
+                                <h4 class="font-bold mb-2">Punctualitate</h4>
+                                <p class="text-xs text-slate-500">Respectăm termenele stabilite fără excepții.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Valorile Noastre -->
+            <section class="py-24 px-4 md:px-20 lg:px-40 bg-slate-900 text-white">
+                <div class="max-w-[1200px] mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-2">Valorile Noastre</h2>
+                        <h3 class="text-3xl md:text-5xl font-black">Ce ne definește echipa</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div class="text-center group">
+                            <div class="size-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined">security</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Transparență</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Oferim estimări clare și comunicare deschisă pe tot parcursul proiectului, fără costuri ascunse.</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="size-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Excelență</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Nu ne oprim până când rezultatul nu este perfect. Standardele noastre sunt cele mai ridicate din piață.</p>
+                        </div>
+                        <div class="text-center group">
+                            <div class="size-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined">diversity_3</span>
+                            </div>
+                            <h4 class="text-xl font-bold mb-4">Echipă</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Oamenii noștri sunt experți cu experiență, pasionați de ceea ce fac și orientați către succesul proiectului.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-300 py-16 px-4 md:px-20 lg:px-40 border-t border-white/5">
+            <div class="max-w-[1200px] mx-auto text-center">
+                <p class="text-sm">© 2024 Ticu Construct. Toate drepturile rezervate.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
