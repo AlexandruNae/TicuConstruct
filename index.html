@@ -65,13 +65,6 @@
             }
         }
     </style>
-    <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
 </head>
 
 <body class="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100">
@@ -104,15 +97,6 @@
                 </nav>
 
                 <div class="flex items-center gap-2 md:gap-4 shrink-0">
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-primary/10 hover:text-primary transition-all group">
-                        <span id="theme-toggle-dark-icon"
-                            class="hidden material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">light_mode</span>
-                        <span id="theme-toggle-light-icon"
-                            class="hidden material-symbols-outlined text-2xl group-hover:-rotate-12 transition-transform">dark_mode</span>
-                    </button>
-
                     <div
                         class="hidden sm:inline-block relative p-0.5 rounded-full overflow-hidden hover:scale-105 transition duration-300 active:scale-100 before:content-[''] before:absolute before:inset-[-100%] before:bg-[conic-gradient(from_0deg,_#f3712b,_#f3712b30,_#f3712b)] button-wrapper">
                         <button
@@ -216,51 +200,6 @@
             closeMenuBtn.addEventListener('click', toggleMenu);
             mobileOverlay.addEventListener('click', toggleMenu);
             mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-            // Theme Toggle Logic
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-            // Set initial icons
-            if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                themeToggleDarkIcon.classList.remove('hidden');
-                document.documentElement.classList.add('dark');
-            }
-
-            else {
-                themeToggleLightIcon.classList.remove('hidden');
-                document.documentElement.classList.remove('dark');
-            }
-
-            themeToggleBtn.addEventListener('click', function () {
-                themeToggleDarkIcon.classList.toggle('hidden');
-                themeToggleLightIcon.classList.toggle('hidden');
-
-                if (localStorage.getItem('color-theme')) {
-                    if (localStorage.getItem('color-theme') === 'light') {
-                        document.documentElement.classList.add('dark');
-                        localStorage.setItem('color-theme', 'dark');
-                    }
-
-                    else {
-                        document.documentElement.classList.remove('dark');
-                        localStorage.setItem('color-theme', 'light');
-                    }
-                }
-
-                else {
-                    if (document.documentElement.classList.contains('dark')) {
-                        document.documentElement.classList.remove('dark');
-                        localStorage.setItem('color-theme', 'light');
-                    }
-
-                    else {
-                        document.documentElement.classList.add('dark');
-                        localStorage.setItem('color-theme', 'dark');
-                    }
-                }
-            });
         </script>
         <main class="flex-1">
             <!-- Hero Section -->
@@ -305,7 +244,7 @@
                     </div>
                     <!-- Image Column -->
                     <div class="flex-1 relative flex justify-end">
-                        <div class="w-full max-w-[200px] sm:max-w-[300px] lg:max-w-none relative">
+                        <div class="w-full max-w-[230px] sm:max-w-[300px] lg:max-w-none relative">
                             <div
                                 class="absolute inset-0 bg-primary/5 blur-[40px] md:blur-[120px] rounded-full -z-10 animate-pulse">
                             </div><img alt="Ticu Construct Hammer and Helmet"
