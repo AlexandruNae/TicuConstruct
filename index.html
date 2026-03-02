@@ -105,12 +105,12 @@
                 </nav>
 
                 <div class="flex items-center gap-2 md:gap-4 shrink-0">
-                    <div
+                    <a href="#cerere-oferta"
                         class="hidden sm:inline-block relative p-0.5 rounded-full overflow-hidden hover:scale-105 transition duration-300 active:scale-100 before:content-[''] before:absolute before:inset-[-100%] before:bg-[conic-gradient(from_0deg,_#f3712b,_#f3712b30,_#f3712b)] button-wrapper">
-                        <button
-                            class="relative z-10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-full px-6 py-2 font-bold text-sm">Cere
-                            ofertă</button>
-                    </div>
+                        <span
+                            class="relative z-10 block bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-full px-6 py-2 font-bold text-sm text-center">Cere
+                            ofertă</span>
+                    </a>
                     <!-- Mobile Menu Toggle -->
                     <button id="mobile-menu-btn"
                         class="lg:hidden w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-primary/10 hover:text-primary transition-all">
@@ -148,16 +148,16 @@
                                         <span
                                             class="text-[10px] md:text-xs uppercase font-bold text-slate-500 tracking-wider">Sună-l
                                             pe Ticu</span>
-                                        <a href="tel:+40722123456"
+                                        <a href="tel:+40727843297"
                                             class="text-slate-900 dark:text-white font-black text-sm sm:text-lg md:text-2xl hover:text-primary transition-colors">+40
-                                            722 123 456</a>
+                                            727 843 297</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap items-center justify-start gap-3 mt-6 md:mt-10"><button
+                        <div class="flex flex-wrap items-center justify-start gap-3 mt-6 md:mt-10"><a href="#cerere-oferta"
                                 class="flex items-center justify-center rounded-full h-10 sm:h-12 md:h-14 px-5 sm:px-8 md:px-10 bg-primary text-white text-[11px] sm:text-sm md:text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 leading-none">Cere
-                                ofertă </button><button
+                                ofertă </a><button
                                 class="flex items-center justify-center rounded-full h-10 sm:h-12 md:h-14 px-5 sm:px-8 md:px-10 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-[11px] sm:text-sm md:text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all leading-none">Galerie
                             </button></div>
                     </div>
@@ -304,12 +304,12 @@
                         </div>
                     </div>
                     <div class="mt-20 flex justify-center">
-                        <div
+                        <a href="#cerere-oferta"
                             class="relative inline-block p-1 rounded-full overflow-hidden hover:scale-105 transition duration-300 active:scale-100 before:content-[''] before:absolute before:inset-[-100%] before:bg-[conic-gradient(from_0deg,_#f3712b,_#f3712b30,_#f3712b)] button-wrapper shadow-2xl shadow-primary/20">
-                            <button
-                                class="relative z-10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-full px-12 py-5 font-black text-xl">Cere
-                                o ofertă de preț</button>
-                        </div>
+                            <span
+                                class="relative z-10 block bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-full px-12 py-5 font-black text-xl text-center">Cere
+                                o ofertă de preț</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -412,11 +412,50 @@
                     <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                         Suntem aici să te ajutăm cu orice proiect de construcție sau amenajare.
                         Contactează-ne pentru o ofertă personalizată și corectă.</p>
-                    <div class="flex flex-wrap justify-center gap-6"><a href="tel:+40722123456"
+                    <div class="flex flex-wrap justify-center gap-6"><a href="tel:+40727843297"
                             class="bg-primary text-white text-lg font-bold px-12 py-5 rounded-full shadow-xl shadow-primary/20 hover:scale-105 transition-all flex items-center gap-3"><span
-                                class="material-symbols-outlined">call</span>Sună Acum </a><a href="#contact"
+                                class="material-symbols-outlined">call</span>Sună Acum </a><a href="#cerere-oferta"
                             class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-lg font-bold px-12 py-5 rounded-full shadow-md hover:bg-slate-50 transition-all border border-slate-200 dark:border-slate-700">Solicită
                             Ofertă </a></div>
+                </div>
+            </section>
+            <!-- Formular Cerere Ofertă -->
+            <section class="py-20 px-4 md:px-20 lg:px-40 bg-white dark:bg-background-dark" id="cerere-oferta">
+                <div class="max-w-[600px] mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">Cere o ofertă</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-10">Completează formularul și te contactăm în cel mai scurt timp.</p>
+                    <form id="form-oferta"
+                        class="flex flex-col gap-6 p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700">
+                        <div>
+                            <label for="telefon" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Telefon *</label>
+                            <input type="tel" id="telefon" name="telefon" required
+                                placeholder="+40 7XX XXX XXX"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                placeholder="email@exemplu.ro"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+                        </div>
+                        <div>
+                            <label for="zona" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Locație / Zonă *</label>
+                            <input type="text" id="zona" name="zona" required
+                                placeholder="ex: București Sector 3, Ilfov, etc."
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+                        </div>
+                        <div>
+                            <label for="descriere" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Descriere scurtă *</label>
+                            <textarea id="descriere" name="descriere" required rows="4"
+                                placeholder="Descrie pe scurt proiectul: tip lucrare, suprafață aproximativă, termen dorit..."
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">send</span>Trimite cererea
+                        </button>
+                    </form>
+                    <p class="text-xs text-slate-500 dark:text-slate-500 mt-4 text-center">* Câmpuri obligatorii. Datele sunt folosite doar pentru a te contacta.</p>
                 </div>
             </section>
         </main>
@@ -441,10 +480,11 @@
                 <div>
                     <h3 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Link-uri Rapide</h3>
                     <ul class="flex flex-col gap-4 text-sm">
-                        <li><a class="hover:text-primary transition-colors" href="#">Acasă</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="index.html">Acasă</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#servicii">Servicii</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#despre">Despre Noi</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Proiecte</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="galerie.html">Proiecte</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#cerere-oferta">Cere ofertă</a></li>
                     </ul>
                 </div>
                 <div>
@@ -455,8 +495,8 @@
                                 Nico Ticu</span></li>
                         <li class="flex items-start gap-3"><span
                                 class="material-symbols-outlined text-primary text-xl">phone</span><a
-                                href="tel:+40722123456" class="hover:text-primary transition-colors">+40 722 123
-                                456</a></li>
+                                href="tel:+40727843297" class="hover:text-primary transition-colors">+40 727 843
+                                297</a></li>
                         <li class="flex items-start gap-3"><span
                                 class="material-symbols-outlined text-primary text-xl">mail</span><a
                                 href="mailto:contact@ticuconstruct.ro"
@@ -542,20 +582,20 @@
             </nav>
             <div
                 class="mt-auto p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
-                <a href="tel:+40722123456" class="flex items-center gap-4 mb-6 group">
+                <a href="tel:+40727843297" class="flex items-center gap-4 mb-6 group">
                     <div
                         class="size-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                         <span class="material-symbols-outlined text-2xl">call</span>
                     </div>
                     <div class="flex flex-col">
                         <span class="text-xl font-medium text-slate-600 font-handwriting -mb-1">suna-l pe Ticu</span>
-                        <span class="text-base font-black text-black dark:text-white">+40 722 123 456</span>
+                        <span class="text-base font-black text-black dark:text-white">+40 727 843 297</span>
                     </div>
                 </a>
-                <button
-                    class="w-full bg-primary text-white py-4 rounded-2xl font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                <a href="#cerere-oferta" id="mobile-oferta-btn"
+                    class="w-full bg-primary text-white py-4 rounded-2xl font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center">
                     Cere Ofertă
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -577,6 +617,17 @@
         closeMenuBtn.addEventListener('click', toggleMenu);
         mobileOverlay.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+        document.getElementById('mobile-oferta-btn')?.addEventListener('click', toggleMenu);
+
+        document.getElementById('form-oferta').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const t = document.getElementById('telefon').value;
+            const em = document.getElementById('email').value;
+            const z = document.getElementById('zona').value;
+            const d = document.getElementById('descriere').value;
+            const body = `Telefon: ${t}\nEmail: ${em}\nLocație/Zonă: ${z}\n\nDescriere:\n${d}`;
+            window.location.href = `mailto:contact@ticuconstruct.ro?subject=${encodeURIComponent('Cerere ofertă - Ticu Construct')}&body=${encodeURIComponent(body)}`;
+        });
     </script>
 </body>
 
