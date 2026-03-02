@@ -422,6 +422,10 @@
             <!-- Formular Cerere Ofertă -->
             <section class="py-20 px-4 md:px-20 lg:px-40 bg-white dark:bg-background-dark" id="cerere-oferta">
                 <div class="max-w-[600px] mx-auto">
+                    <div id="multumim-msg" class="hidden mb-6 p-4 rounded-xl bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-800">
+                        <p class="font-bold">Mulțumim!</p>
+                        <p class="text-sm">Cererea ta a fost trimisă. Te contactăm în cel mai scurt timp.</p>
+                    </div>
                     <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">Cere o ofertă</h2>
                     <p class="text-slate-600 dark:text-slate-400 mb-10">Completează formularul și te contactăm în cel mai scurt timp.</p>
                     <form id="form-oferta"
@@ -619,14 +623,34 @@
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
         document.getElementById('mobile-oferta-btn')?.addEventListener('click', toggleMenu);
 
-        document.getElementById('form-oferta').addEventListener('submit', function(e) {
+        if (window.location.hash === '#multumim') {
+            document.getElementById('multumim-msg').classList.remove('hidden');
+        }
+
+        document.getElementById('form-oferta').addEventListener('submit', async function(e) {
             e.preventDefault();
-            const t = document.getElementById('telefon').value;
-            const em = document.getElementById('email').value;
-            const z = document.getElementById('zona').value;
-            const d = document.getElementById('descriere').value;
-            const body = `Telefon: ${t}\nEmail: ${em}\nLocație/Zonă: ${z}\n\nDescriere:\n${d}`;
-            window.location.href = `mailto:contact@ticuconstruct.ro?subject=${encodeURIComponent('Cerere ofertă - Ticu Construct')}&body=${encodeURIComponent(body)}`;
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Se trimite...';
+
+            const formData = new FormData(this);
+            try {
+                const res = await fetch('send-oferta.php', { method: 'POST', body: formData });
+                const data = await res.json();
+                if (data.ok) {
+                    window.location.hash = 'multumim';
+                    document.getElementById('multumim-msg').classList.remove('hidden');
+                    this.reset();
+                    window.scrollTo({ top: document.getElementById('cerere-oferta').offsetTop - 80, behavior: 'smooth' });
+                } else {
+                    alert('Eroare: ' + (data.error || 'Nu s-a putut trimite cererea.'));
+                }
+            } catch (err) {
+                alert('Eroare de conexiune. Verifică că send-oferta.php este pe server și că ai configurat config.php.');
+            }
+            btn.disabled = false;
+            btn.innerHTML = originalText;
         });
     </script>
 </body>

@@ -1,0 +1,19 @@
+<?php
+/**
+ * SETUP: Copiază acest fișier ca config.php și completează cu datele SMTP.
+ *
+ * 1. Rulează în terminal: composer install
+ * 2. Copiază: cp config.php.example config.php
+ * 3. Completează parola SMTP în config.php
+ *
+ * Exemple SMTP:
+ * - Gmail/Google Workspace: smtp.gmail.com, Port 587, "Parolă pentru aplicații" (Cont Google → Securitate)
+ * - cPanel: mail.ticuconstruct.ro sau localhost, Port 465 (SSL) sau 587 (TLS)
+ */
+return [
+    'smtp_host'     => 'smtp.gmail.com',      // ex: smtp.gmail.com, mail.ticuconstruct.ro
+    'smtp_port'     => 587,                    // 587 (TLS) sau 465 (SSL)
+    'smtp_secure'   => 'tls',                 // 'tls' sau 'ssl'
+    'smtp_user'     => 'contact@ticuconstruct.ro',
+    'smtp_pass'     => 'PAROLA_TA',           // parola contului sau "parolă pentru aplicații"
+];
