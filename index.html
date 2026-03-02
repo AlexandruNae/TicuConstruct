@@ -428,8 +428,8 @@
                     </div>
                     <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">Cere o ofertă</h2>
                     <p class="text-slate-600 dark:text-slate-400 mb-10">Completează formularul și te contactăm în cel mai scurt timp.</p>
-                    <form id="form-oferta" name="cerere-oferta" method="POST" data-netlify="true"
-                        netlify-honeypot="bot-field" action="/?trimis=1#cerere-oferta"
+                    <form id="form-oferta" name="cerere-oferta" method="POST" netlify
+                        netlify-honeypot="bot-field" action="/multumim.html"
                         class="flex flex-col gap-6 p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700">
                         <input type="hidden" name="form-name" value="cerere-oferta">
                         <p class="hidden">
@@ -628,8 +628,7 @@
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
         document.getElementById('mobile-oferta-btn')?.addEventListener('click', toggleMenu);
 
-        const query = new URLSearchParams(window.location.search);
-        if (window.location.hash === '#multumim' || query.get('trimis') === '1') {
+        if (window.location.hash === '#multumim') {
             document.getElementById('multumim-msg').classList.remove('hidden');
             window.scrollTo({ top: document.getElementById('cerere-oferta').offsetTop - 80, behavior: 'smooth' });
         }
